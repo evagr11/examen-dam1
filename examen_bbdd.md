@@ -2,8 +2,7 @@
 
 ## Alumno
 
-Nombre:
-Correo:
+IP: 192.168.60.211
 
 ## Instrucciones
 
@@ -18,6 +17,8 @@ Puedes utilizar `curl` o `Python` para realizar las peticiones. Deberás entrega
 ## Ejercicio 1: Hola mundo
 
 Haz una llamada `GET` a la ruta `/`, la `bandera` estará en la respuesta.
+
+La bandera es {3LR3570N03574NF4C1L}
 
 ## Ejercicio 2: Método
 

@@ -11,6 +11,8 @@ codigo
 ```
 
 1. ¿Que diferencia una variable creada con `let` de una creada con `const`?
+    `let`: Permite declarar variables cuyo valor puede cambiar posteriormente.
+    `const`: Declara variables con un valor constante, lo que significa que no se puede reasignar después de su inicialización.
 2. ¿Qué es un dato primitivo? ¿y un objeto?
 2. ¿Qué diferencia hay entre `==` y `===`?
 3. Analiza el siguiente código, ¿qué valor se mostrará en la consola?
@@ -38,3 +40,10 @@ boton.addEventListener('click', saluda());
 8. ¿Como se añade una libreria externa a un proyecto de JavaScript? Puedes usar p5 como referencia.
 9. ¿Que es esto? `<meta charset="UTF-8">` ¿Por qué es importante?
 10. ¿Que es una función? Explica brevemente su sintaxis en el lenguaje que prefieras.
+
+
+
+
+
+
+

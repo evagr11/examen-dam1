@@ -4,11 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        section{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .gradiente-1{
+            background: linear-gradient(180deg, rgb(105, 255, 235), rgb(0, 128, 68));
+        }
+        button{
+            width: 100px;
+            background: whitesmoke;
+        }
+    </style>
+
 </head>
 <body>
-    <p></p>
-    <input type="range" min="0" max="100">
-    <p></p>
-    <input type="range" min="0" max="100">    
+    <section class="gradiente-1">
+    <p>Valor 1: <p id="valor1">0</p></p>
+    <input type="range" min="0" max="100" id="range1">
+    <p>Valor 2: <p id="valor2">0</p></p>
+    <input type="range" min="0" max="100" id="range2">
+    
+    <p>Operaciones:</p>
+    <p>Suma: <p id="suma">0</p></p>
+    <p>Resta: <p id="resta">0</p></p>
+    <p>Multiplicación: <p id="multiplicacion">0</p></p>
+    <p>División: <p id="division">0</p></p>
+    </section>
+    <script>
+        // Obtener los elementos
+        const range1 = document.getElementById('range1');
+        const range2 = document.getElementById('range2');
+        const valor1 = document.getElementById('valor1');
+        const valor2 = document.getElementById('valor2');
+        const suma = document.getElementById('suma');
+        const resta = document.getElementById('resta');
+        const multiplicacion = document.getElementById('multiplicacion');
+        const division = document.getElementById('division');
+
+        // Función para actualizar los valores
+        function actualizarValores() {
+            const valor1Actual = +range1.value; // Utilizar el operador + para convertir a número
+            const valor2Actual = +range2.value; // Utilizar el operador + para convertir a número
+
+            // Actualizar los valores en el HTML
+            valor1.textContent = valor1Actual;
+            valor2.textContent = valor2Actual;
+
+            // Realizar las operaciones
+            suma.textContent = valor1Actual + valor2Actual;
+            resta.textContent = valor1Actual - valor2Actual;
+            multiplicacion.textContent = valor1Actual * valor2Actual;
+            // Para la división, evitamos la división por cero
+            if (valor2Actual !== 0) {
+                division.textContent = valor1Actual / valor2Actual; // Sin redondear el resultado
+            } else {
+                division.textContent = 'Indefinido'; // Caso de división por cero
+            }
+        }
+
+        // Añadir eventos para cuando el usuario cambia los valores de los range
+        range1.addEventListener('input', actualizarValores);
+        range2.addEventListener('input', actualizarValores);
+
+        // Llamar a la función para inicializar los valores al cargar la página
+        actualizarValores();
+    </script>
 </body>
 </html>
+

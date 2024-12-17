@@ -10,7 +10,7 @@ En este examen tendrás que realizar una serie de peticiones `HTTP` a un servido
 
 Identificarás las banderas porque estarán escritas en el siguiente formato `{}`. Por ejemplo `la bandera es {ejemplo}`.
 
-El servidor estará disponible localmente, en la IP indicada el dia del examen en el puerto `3000`.
+El servidor estará disponible localmente, en la IP indicada el dia del examen en el puerto `3030`.
 
 Puedes utilizar `curl` o `Python` para realizar las peticiones. Deberás entregar un `script` por cada ejercicio que realices, donde se muestre la bandera capturada en la terminal.
 
@@ -18,17 +18,22 @@ Puedes utilizar `curl` o `Python` para realizar las peticiones. Deberás entrega
 
 Haz una llamada `GET` a la ruta `/`, la `bandera` estará en la respuesta.
 
-La bandera es {3LR3570N03574NF4C1L}
+`Python` La bandera es {3LR3570N03574NF4C1L}
 
 ## Ejercicio 2: Método
 
 Para obtener la `bandera` empieza por hacer una petición `GET` a la ruta `/metodo`.
+
+`Python` La bandera es {patchwork}
 
 ## Ejercicio 3: Enviando datos
 
 El endpoint que usarás para este ejercicio es `/enviar_datos`
 
 Para obtener **las banderas** tendrás que enviar una petición `POST` a la ruta `/shared_data` enviando **CUALQUIER** dato en la petición, ya sea en el `body` o en la propia `URL` adjuntandolos como una `query`.
+
+`body` Una bandera {n1c3j0b!}
+`query` Otra bandera {g00db0t}
 
 ## Ejercicio 4: Usuarios
 

@@ -4,10 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 2rem;
+        }
+        
+        .green {
+            color: lightgreen;
+        }
+        .yellow {
+            color: lightgoldenrodyellow;
+        }
+        .red {
+            color: lightcoral;
+        }
+        section{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .gradiente-1{
+            background: linear-gradient(180deg, hotpink, purple);
+        }
+        button{
+            width: 100px;
+            background: whitesmoke;
+        }
+    </style>
 </head>
 <body>
-    <p></p>
-    <button>+</button>
-    <button>-</button>
+    <section class="gradiente-1">
+    <button id="incrementar">+</button>
+    <p id="marcador" class="green">0</p>
+    <button id="decrementar">-</button>
+    </section>
+
+    <script>
+        let marcador = 0;
+
+        const marcadorElement = document.getElementById("marcador");
+        const btnIncrementar = document.getElementById("incrementar");
+        const btnDecrementar = document.getElementById("decrementar");
+
+        // Funcion para que si el numero es menor d 5 sea verde, 
+        //si esta entre 5 y 7 sea amarillo y si no rojo
+        function actualizarMarcador() {
+            marcadorElement.textContent = marcador;
+
+            if (marcador < 5) {
+                marcadorElement.className = 'green';
+            } else if (marcador >= 5 && marcador <= 7) {
+                marcadorElement.className = 'yellow';
+            } else {
+                marcadorElement.className = 'red';
+            }
+        }
+        
+        //Al hacer click en el boton de + se suma 1 si el marcador es menor que 10
+        btnIncrementar.addEventListener("click", () => {
+            if (marcador < 10) {
+                marcador++;
+                actualizarMarcador();
+            }
+        });
+
+        //Al hacer click en el boton de - se resta 1 si el marcador es mayor que 0
+        btnDecrementar.addEventListener("click", () => {
+            if (marcador > 0) {
+                marcador--;
+                actualizarMarcador();
+            }
+        });
+
+        // Inicia el marcador al cargar la página
+        actualizarMarcador();
+    </script>
 </body>
 </html>
